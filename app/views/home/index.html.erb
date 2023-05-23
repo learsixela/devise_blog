@@ -1,0 +1,6 @@
+
+<% if user_signed_in? %>
+    <h1>Hola <%= current_user.email%>, Bienvenido </h1>
+<%else%>
+    <p>Registrate para optar a mas opciones</p>
+<%end%>
