@@ -23,6 +23,8 @@ default: &default
 
 development:
   <<: *default
+  username: <%= ENV["basedatos_user"] %>
+  password: <%= ENV["basedatos_pass"] %>
   database: blog_development
 
   # The specified database role being used to connect to postgres.

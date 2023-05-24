@@ -78,3 +78,5 @@ gem "jquery-rails", "~> 4.5"
 gem "devise", "~> 4.9"
 
 gem "popper_js", "~> 2.11"
+
+gem "figaro"
