@@ -1,24 +1,34 @@
-# README
+# PROYECTO CON DEVISE Y BOOTSTRAP 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Pasos a seguir para la creacion de un proyecto desde cero con devise y bootstrap (incluye popper.js)
 
-Things you may want to cover:
+Ejecutar:
 
-* Ruby version
+*** BOOTSTRAP ***
 
-* System dependencies
+* agregar bootstrap como gema al proyecto
+gem install bootstrap
+gem install jquery-rails
+gem install popper_js
 
-* Configuration
+* agregamos la gema al Gemfile y ejecuta un bundle install
+bundle add bootstrap
+bundle add jquery-rails
+bundle add popper_js
 
-* Database creation
+* cambiar el nombre 
+application.css a application.scss
 
-* Database initialization
+*  agregar en application.scss la linea
+@import "bootstrap";
 
-* How to run the test suite
+*  agregar a application.js 
+import "popper"
+import "bootstrap"
 
-* Services (job queues, cache servers, search engines, etc.)
+* agregar en initializers/config/assets.rb
+Rails.application.config.assets.precompile += %w( application.scss bootstrap.min.js popper.js )
 
-* Deployment instructions
-
-* ...
+* agregar en config/importmap.rb
+pin "popper", to: 'popper.js', preload: true
+pin "bootstrap", to: 'bootstrap.min.js', preload: true
