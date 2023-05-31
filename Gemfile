@@ -80,3 +80,24 @@ gem "devise", "~> 4.9"
 gem "popper_js", "~> 2.11"
 
 gem "figaro"
+
+=begin
+gem 'unicorn'
+group :development do
+  gem 'capistrano', '~> 3.11'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails', github: 'capistrano/rails'
+  gem 'capistrano-rails-console'
+  gem 'capistrano-sidekiq'
+  gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.4', require: false
+  gem 'airbrussh', require: false
+  gem 'capistrano-bundler', '1.1.1'
+end
+
+#gem 'capistrano', '~> 3.11'
+#gem 'capistrano-rails', '~> 1.4'
+#gem 'capistrano-passenger', '~> 0.2.0'
+#gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.4'
+#gem 'capistrano-rvm'
+#gem 'capistrano-bundler', '1.1.1'
+=end
